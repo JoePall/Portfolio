@@ -1,4 +1,6 @@
-##Title
-Josiah Powell
+# CSS Bootstrap Homework
 
-Testing...
+Demonstrating use of Bootstrap and Media Queries.
+
+Author: Josiah Powell
+Date: 6/18/20
