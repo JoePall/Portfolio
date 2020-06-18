@@ -1,0 +1,38 @@
+:root {
+    --accent-color: #5caaa5; 
+}
+
+#header {
+    padding-left: 20px;
+}
+
+@media screen and (max-width: 992px) {
+    #header {
+        padding: 0;
+    }   
+}
+
+.bg-accent {
+    background-color: var(--accent-color);
+}
+
+body {
+    background-color: #ddd;
+}
+
+.text-accent {
+    color: var(--accent-color);
+}
+
+.bg-accent {
+    background-color: #5caaa5;
+    color: #fff;
+}
+
+.border-accent {
+    border-top: #5caaa5 solid 10px;
+}
+
+footer {
+    background-color: #33333333;
+}
