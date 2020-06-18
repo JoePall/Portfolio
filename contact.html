@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="./Assets/css/styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -28,27 +28,30 @@
         </div>
 
         <div class="row m-0 p-0">
-            <div id="card" class="card col-lg-8 col-sm-10 p-5 m-5">
-                <p class="display-4 p-0 m-0 text-accent">About Me</p>
+            <div id="card" class="card col-lg-9 col-sm-10 p-5 m-5">
+                <p class="display-4 p-0 m-0 text-accent">Contact</p>
                 <hr class="mb-4">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-4 col-sm-12">
-                            <img class="w-100" src="./Assets/Images/profile.png" alt="Profile Picture for Josiah Powell">
-                        </div>
-
-                        <div class="col-lg-8 col-sm-12 p-4">
-                            <p>
-                                I was born and raised in Kansas and from an early age loved puzzles (Age 2). During my high school years I learned to thoroughly enjoy Math and specifically Algebra. My dad introduced me to programming in high school and I enjoyed learning C# and software development.
-                            </p>
-                        </div>
+                <form>
+                    <div class="form-group">
+                        <label for="name-input" class="text-muted">Name</label>
+                        <input type="text" class="form-control text-muted" id="name-input" placeholder="John Doe">
                     </div>
-                </div>
+                    <div class="form-group">
+                        <label for="email-input" class="text-muted">Email</label>
+                        <input type="email" class="form-control" id="email-input" placeholder="johndoe@gmail.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-input" class="text-muted">Message</label>
+                        <textarea type="textarea" class="form-control" id="message-input"
+                            placeholder="Message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary bg-accent">Submit</button>
+                </form>
             </div>
         </div>
     </div>
 
-    <div class="row align-items-center p-0 mt-3 bg-secondary border-accent">
+    <div class="sticky-footer align-items-center p-0 mt-3 bg-secondary border-accent">
         <div class="text-light p-2 pt-4 text-center mx-auto">
             <p>&copy; Josiah Powell</p>
         </div>

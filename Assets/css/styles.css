@@ -2,22 +2,28 @@
     --accent-color: #5caaa5; 
 }
 
-#header {
-    padding-left: 1rem;
-}
-
 @media screen and (max-width: 992px) {
     #header {
-        padding: 0;
+        padding: 0 !important;
     }   
+
+    #card {
+        margin: 2em auto 2em !important;
+    }
 }
 
 .bg-accent {
-    background-color: var(--accent-color);
+    background-color: var(--accent-color) !important;
+    border-color: #5caaa599 !important;
 }
 
 body {
     background-color: #ddd;
+}
+
+img {
+    border-radius: 7px;
+    box-shadow: 0 0 3px 3px #33333333;
 }
 
 .text-accent {
@@ -31,6 +37,10 @@ body {
 
 .border-accent {
     border-top: #5caaa5 solid 10px;
+}
+
+textarea {
+    height: 150px !important;
 }
 
 footer {
