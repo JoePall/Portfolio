@@ -24,16 +24,6 @@ textarea {
     height: 150px !important;
 }
 
-@media screen and (max-width: 992px) {
-    #header {
-        padding: 0 !important;
-    }   
-
-    #card {
-        margin: 2em auto 2em !important;
-    }
-}
-
 .bg-accent {
     background-color: var(--accent-color) !important;
     border-color: #5caaa599 !important;
@@ -56,4 +46,14 @@ textarea {
 .img-grayscale:hover {
     -webkit-filter: grayscale(0%);
     filter: grayscale(0%);
+}
+
+@media screen and (max-width: 992px) {
+    #header {
+        padding: 0 !important;
+    }   
+
+    #card {
+        margin: 2em auto 2em !important;
+    }
 }
