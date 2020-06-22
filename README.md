@@ -1,4 +1,4 @@
-# CSS Bootstrap Homework
+# CSS Bootstrap example
 
 This website demonstrates Bootstrap Navbar, Grid, Forms, Cards and Sticky Footer.
 
