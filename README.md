@@ -1,17 +1,26 @@
-# CSS Bootstrap example
+# CSS Bootstrap
+
+
+A website built with bootstrap and media queries.
 
 
 ## Description
 
-This repo demonstrates Bootstrap's Navbar, Grid, Forms, Cards and Sticky Footer.
 
-This website also uses css media queries.
+This repo demonstrates;
+1. Bootstrap's Navbar, Grid, Forms, Cards and Sticky Footer.
+2. CSS Media Queries.
+3. Valid HTML & CSS
 
-## The website
+
+## The Website
+
 
 ![Screenshot of Github Website](https://joepall.github.io/CSS-Bootstrap/Assets/Images/screenshot.png)
 
+
 [Checkout the website](https://joepall.github.io/CSS-Bootstrap/)
+
 
 Author: Josiah Powell
 
