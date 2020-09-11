@@ -1,0 +1,27 @@
+html {
+    height: 100%;
+    background: linear-gradient(23deg, #f00,#ffffff,#ffffff,#0f0);
+}
+
+body {
+    height: 100%;
+    /* background: linear-gradient(-67deg, #ff880099,#ffffffcc,#ff994477,#ffffffcc,#ccff7777,#ffffffcc,#ccff7799); */
+    background: linear-gradient(-67deg, #0000ff77,#ffffff99,#ffff0077);
+}
+
+* {
+    transition: .2s;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+}
+
+article>p, section>p {
+    text-transform: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.bg-pastel-blue {background-color: #aedde0;}
+.bg-pastel-tan {background-color: #d4b68e;}
+.bg-pastel-salmon {background-color: #fcb293;}
+.bg-pastel-green {background-color: #a9b8b2;}
+.bg-pastel-purple {background-color: rgb(150, 145, 204);}

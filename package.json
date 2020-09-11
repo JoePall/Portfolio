@@ -1,0 +1,16 @@
+{
+    "name": "portfolio",
+    "version": "1.0.0",
+    "description": "My Portfolio",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "author": "Josiah Powell",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.16.3",
+        "express-handlebars": "^3.0.0",
+        "node": "^14.8.0"
+    }
+}
