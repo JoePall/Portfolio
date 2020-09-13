@@ -16,6 +16,15 @@
     background: linear-gradient(-23deg, #0000ff77,#00ff0044,#00ffff99,#ffff0077);
 }
 
+.bg-3 {
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-attachment: absolute;
+    background-position: center;
+    background: linear-gradient(0deg, #ffffff77,#ffffff77);
+}
+
 * {
     transition: .2s;
     font-family: 'Raleway', sans-serif;
