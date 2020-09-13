@@ -1,12 +1,19 @@
-html {
+.bg-1 {
     height: 100%;
-    background: linear-gradient(23deg, #f00,#ffffff,#ffffff,#0f0);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-attachment: absolute;
+    background-position: center;
+    background: linear-gradient(23deg, #f00, #f00,#ffffff,#ffffff,#ffffff,#0f0,#0f0);
 }
 
-body {
+.bg-2 {
     height: 100%;
-    /* background: linear-gradient(-67deg, #ff880099,#ffffffcc,#ff994477,#ffffffcc,#ccff7777,#ffffffcc,#ccff7799); */
-    background: linear-gradient(-67deg, #0000ff77,#ffffff99,#ffff0077);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-attachment: absolute;
+    background-position: center;
+    background: linear-gradient(-67deg, #0000ff77,#0000ff77,#ffffff99,#ffffff99,#ffffff99,#ffff0077,#ffff0077);
 }
 
 * {

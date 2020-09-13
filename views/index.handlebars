@@ -7,6 +7,27 @@
                             <h1>Who are you?</h1>
                             <p>I am a software developer with years of experience in native Windows Desktop and Mobile applications.</p>
                             <p>I live in Overbrook, Kansas.</p>
+                            <p>Please check out the projects below that I have made significant contributions too. Some of these projects others have helped out on as well and this is noted in the corresponding GitHub project under the Contributors section.</p>
                         </section>
                     </div>
                 </div>
+                {{#each data}}    
+                <div class="row">
+                    <div class="col-12 card p-3 m-3">
+                        <h3>{{name}}</h3><br>
+                        <p>{{description}}</p><br>
+                        <ul>
+                            {{#if website}}
+                            <li>
+                                Website: <a href="{{website}}">{{website}}</a>
+                            </li>
+                            {{/if}}
+                            {{#if url}}
+                            <li>
+                                Repository: <a href="{{url}}">{{url}}</a>
+                            </li>
+                            {{/if}}
+                        </ul>
+                    </div>
+                </div>
+                {{/each}}
