@@ -27,8 +27,18 @@ article>p, section>p {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+.no-overflow {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .bg-pastel-blue {background-color: #aedde0;}
 .bg-pastel-tan {background-color: #d4b68e;}
 .bg-pastel-salmon {background-color: #fcb293;}
 .bg-pastel-green {background-color: #a9b8b2;}
 .bg-pastel-purple {background-color: rgb(150, 145, 204);}
+
+li {
+    list-style-type: none;
+}

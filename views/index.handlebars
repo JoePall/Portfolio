@@ -9,6 +9,7 @@
                             <p>I am a software developer with years of experience in native Windows Desktop and Mobile applications.</p>
                             <p>I live in Overbrook, Kansas.</p>
                             <p>Please check out the projects below that I have made significant contributions too. Some of these projects others have helped out on as well and this is noted in the corresponding GitHub project under the Contributors section.</p>
+                            <b>Please contact me via email at </b> <a href="mailto:josiahpowell@outlook.com">josiahpowell@outlook.com</a>.
                         </section>
                     </div>
                 </div>
@@ -17,17 +18,23 @@
                     <div class="col-12 card p-3 m-3">
                         <h3>{{name}}</h3><br>
                         <p>{{description}}</p><br>
-                        <ul>
-                            {{#if website}}
-                            <li>
-                                Website: <a href="{{website}}">{{website}}</a>
-                            </li>
-                            {{/if}}
-                            {{#if url}}
-                            <li>
-                                Repository: <a href="{{url}}">{{url}}</a>
-                            </li>
-                            {{/if}}
+                        <div class="container">
+                            <div class="row">
+                                {{#if url}}
+                                <div class="col-lg-6 col-md-12">
+                                    <h4>GitHub Repository</h4>
+                                    <a class="w-100 no-overflow btn btn-primary" href="{{url}}">{{url}}</a>
+                                </div>
+                                {{/if}}
+                                {{#if website}}
+                                    <div class="col-lg-6 col-md-12">
+                                        <h4>Website</h4>
+                                        <a class="w-100 no-overflow btn btn-primary" href="{{website}}">{{website}}</a>
+                                    </div>
+                                {{/if}}
+                            </div>
+                        </div>
+                            
                         </ul>
                     </div>
                 </div>
