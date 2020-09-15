@@ -1,19 +1,21 @@
-.bg-1 {
-    height: 100%;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-attachment: absolute;
-    background-position: center;
-    background: linear-gradient(23deg, #faa,#ff9,#f99,#ff9,#9f9);
+html {
+    background: linear-gradient(23deg, #7ff,#f77);
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
-.bg-2 {
-    height: 100%;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-attachment: absolute;
-    background-position: center;
-    background: linear-gradient(-23deg, #0000ff77,#00ff0044,#00ffff99,#ffff0077);
+body {
+    background: linear-gradient(-67deg, #00ff0055, #ff00ff33);
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .bg-3 {
