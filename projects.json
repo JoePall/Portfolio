@@ -1,0 +1,142 @@
+{
+    "Date": "Wed Sep 30 2020",
+    "Data": [
+        {
+            "name": "burger",
+            "url": "https://github.com/JoePall/burger",
+            "description": "BURGER TOWN! A simple application for adding burgers that are wished for and devoured!",
+            "website": "https://fierce-wave-65626.herokuapp.com/",
+            "contributors_url": "https://api.github.com/repos/JoePall/burger/contributors",
+            "screenshots": [
+                {
+                    "url": "https://fierce-wave-65626.herokuapp.com/assets/screenshot1.png",
+                    "alt": "Screenshot of Burger Town App (Mobile)"
+                },
+                {
+                    "url": "https://fierce-wave-65626.herokuapp.com/assets/screenshot2.png",
+                    "alt": "Screenshot of Burger Town App (Desktop)"
+                }
+            ]
+        },
+        {
+            "name": "CMS-PLS",
+            "url": "https://github.com/JoePall/CMS-PLS",
+            "description": "CMS PLS is a content management system for managing roles, departments and employees from a CLI.",
+            "website": "",
+            "contributors_url": "https://api.github.com/repos/JoePall/CMS-PLS/contributors",
+            "screenshots": []
+        },
+        {
+            "name": "Duly-Noted",
+            "url": "https://github.com/JoePall/Duly-Noted",
+            "description": "Duly Noted is a simple note taking application!",
+            "website": "https://whispering-escarpment-77636.herokuapp.com/",
+            "contributors_url": "https://api.github.com/repos/JoePall/Duly-Noted/contributors",
+            "screenshots": []
+        },
+        {
+            "name": "Exploration-Food",
+            "url": "https://github.com/JoePall/Exploration-Food",
+            "description": "Exploration Food Selective Recipe App designed to match the needs of all diets and food restrictions. Great for those with allergies, religious restrictions, or are simply particular about their food.",
+            "website": "https://joepall.github.io/Exploration-Food/",
+            "contributors_url": "https://api.github.com/repos/JoePall/Exploration-Food/contributors",
+            "screenshots": [
+                {
+                    "url": "https://user-images.githubusercontent.com/64044377/88989496-65efbf80-d2a1-11ea-8b3a-339f917facae.png",
+                    "alt": "img-1"
+                },
+                {
+                    "url": "https://user-images.githubusercontent.com/64044377/88989508-6e47fa80-d2a1-11ea-97cd-98182c5d4e16.png",
+                    "alt": "img-2"
+                },
+                {
+                    "url": "https://user-images.githubusercontent.com/64044377/88989440-3e005c00-d2a1-11ea-9892-9d5ec24aab17.png",
+                    "alt": "img-3"
+                }
+            ]
+        },
+        {
+            "name": "Password-Generator",
+            "url": "https://github.com/JoePall/Password-Generator",
+            "description": "Password Generator allows you to generate a strong password for your needs.",
+            "website": "https://joepall.github.io/Password-Generator/",
+            "contributors_url": "https://api.github.com/repos/JoePall/Password-Generator/contributors",
+            "screenshots": [
+                {
+                    "url": "https://joepall.github.io/Password-Generator/assets/images/screenshot.png",
+                    "alt": "Screenshot of Github Website"
+                }
+            ]
+        },
+        {
+            "name": "Portfolio",
+            "url": "https://github.com/JoePall/Portfolio",
+            "description": "My personal portfolio website (Josiah Powell). https://salty-eyrie-05927.herokuapp.com/",
+            "website": "https://salty-eyrie-05927.herokuapp.com/",
+            "contributors_url": "https://api.github.com/repos/JoePall/Portfolio/contributors",
+            "screenshots": [
+                {
+                    "url": "https://joepall.github.io/CSS-Bootstrap/Assets/Images/screenshot.png",
+                    "alt": "Screenshot of Github Website"
+                }
+            ]
+        },
+        null,
+        {
+            "name": "Restaurantier",
+            "url": "https://github.com/JoePall/Restaurantier",
+            "description": "A reservation management application",
+            "website": null,
+            "contributors_url": "https://api.github.com/repos/JoePall/Restaurantier/contributors",
+            "screenshots": []
+        },
+        {
+            "name": "Storventory",
+            "url": "https://github.com/JoePall/Storventory",
+            "description": "Coming Soon",
+            "website": null,
+            "contributors_url": "https://api.github.com/repos/JoePall/Storventory/contributors",
+            "screenshots": []
+        },
+        {
+            "name": "Team-Profile-Generator",
+            "url": "https://github.com/JoePall/Team-Profile-Generator",
+            "description": "Node CLI app generates a single HTML webpage of employee summaries based on input ",
+            "website": null,
+            "contributors_url": "https://api.github.com/repos/JoePall/Team-Profile-Generator/contributors",
+            "screenshots": []
+        },
+        {
+            "name": "terminally-swell",
+            "url": "https://github.com/JoePall/terminally-swell",
+            "description": "Terminally Swell is an extension for VS Code that eliminates repetitive typing such as \"node server.js\", \"node index.js\", etc. as well as the associated \"cd ../..\", \"ls\", etc.",
+            "website": "https://marketplace.visualstudio.com/items?itemName=josiahpowell.terminally-swell",
+            "contributors_url": "https://api.github.com/repos/JoePall/terminally-swell/contributors",
+            "screenshots": []
+        },
+        {
+            "name": "Weather-Dashboard",
+            "url": "https://github.com/JoePall/Weather-Dashboard",
+            "description": "Weather dashboard for checking the current conditions and the five day forecast!",
+            "website": "https://joepall.github.io/Weather-Dashboard/",
+            "contributors_url": "https://api.github.com/repos/JoePall/Weather-Dashboard/contributors",
+            "screenshots": []
+        },
+        {
+            "name": "Web-API",
+            "url": "https://github.com/JoePall/Web-API",
+            "description": "JavaScript Quiz Application! Do a simple JavaScript Quiz with this app and remember to have fun!",
+            "website": "https://joepall.github.io/Web-API/",
+            "contributors_url": "https://api.github.com/repos/JoePall/Web-API/contributors",
+            "screenshots": []
+        },
+        {
+            "name": "Work-Day-Scheduler",
+            "url": "https://github.com/JoePall/Work-Day-Scheduler",
+            "description": "Schedule your workday! This app allows you to schedule your current workday by hour.",
+            "website": "https://joepall.github.io/Work-Day-Scheduler/",
+            "contributors_url": "https://api.github.com/repos/JoePall/Work-Day-Scheduler/contributors",
+            "screenshots": []
+        }
+    ]
+}

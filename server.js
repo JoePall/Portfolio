@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 7000;
 const exphbs = require("express-handlebars");
 
 app.use(express.static("public"));
@@ -17,8 +17,4 @@ const routes = require("./controllers/homeController.js");
 
 app.use(routes);
 
-// Start our server so that it can begin listening to client requests.
-app.listen(PORT, function() {
-  // Log (server-side) when our server has started
-  console.log("Server listening on: http://localhost:" + PORT);
-});
+app.listen(PORT, () => console.log("http://localhost:" + PORT));

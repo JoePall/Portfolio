@@ -18,15 +18,6 @@ body {
     right: 0;
 }
 
-.bg-3 {
-    height: 100%;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-attachment: absolute;
-    background-position: center;
-    background: linear-gradient(0deg, #ffffff77,#ffffff77);
-}
-
 h1 {
     color: #fff;
     text-shadow: 0 0 .3em #000;
@@ -57,4 +48,8 @@ article>p, section>p {
 
 li {
     list-style-type: none;
+}
+
+.bg-50 {
+    opacity: .5;
 }
