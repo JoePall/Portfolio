@@ -13,8 +13,7 @@ router.get("/update", function (req, res) {
     getProjects()
     .then(attachCollaborators)
     .then(attachScreenshots)
-    .then(result => {
-        console.log(result);        
+    .then(result => {    
         storeProjects(result);
         res.render("index", { Projects: result });
     });
@@ -24,14 +23,9 @@ router.get("/", function (req, res) {
     let rawData = fs.readFileSync(filePath, "utf8");
     let contents = JSON.parse(rawData);
     console.log("rendering from json");
-    let projects = [];
-    contents.Data.forEach(x => {
-        if (x) {
-            console.log(x);
-            projects.push(x);
-        }
-    });
-    res.render("index", { Projects: projects });
+    let result = contents.Data.filter(x => x);
+    console.log(result);
+    res.render("index", { Projects: result });
 });
 
 function storeProjects(projects) {
@@ -67,30 +61,40 @@ function getProjects() {
 function attachCollaborators(projects) {
     let requests = projects.map(project => {
         return new Promise((resolve, reject) => {
-            project.contributors = [];
-            var op = {
-                method: 'GET',
-                uri: project.contributors_url,
-                json: true,
-                headers: {
-                    'User-Agent': github.User
-                }
-            };
-
-            request(op, (error, response, body) => {
-                if (error) reject(error);    
-                if (body) {
-                    console.log(body);
-                    body.forEach(contributor => {
-                        project.contributors.push({
-                            avatar_url: body.avatar_url,
-                            login: body.login,
-                            html_url: body.html_url
+            try {
+                project.contributors = [];
+                var op = {
+                    method: 'GET',
+                    uri: project.contributors_url,
+                    json: true,
+                    headers: {
+                        'User-Agent': github.User
+                    }
+                };
+                
+                request(op, (error, response, body) => {
+                try {    
+                    
+                    if (error) reject(error);    
+                    if (body) {
+                        console.log(body);
+                        body.forEach(contributor => {
+                            project.contributors.push({
+                                avatar_url: body.avatar_url,
+                                login: body.login,
+                                html_url: body.html_url,
+                                commits: body.commits
+                            });
                         });
-                    });
-                }
-                resolve(project);
-            });
+                    }
+                    resolve(project);
+                    } catch (error) {
+                        reject(error)
+                    }
+                });
+            } catch (error) {
+                reject(error);
+            }
         });
     });
 
