@@ -7,27 +7,31 @@ const github = {
     User: "JoePall",
 }
 
-router.get("/", function (req, res) {
-    try {
-        let rawData = fs.readFileSync(filePath, "utf8");
-        let contents = JSON.parse(rawData);
-        if (contents.Date == new Date().toDateString()) {
-            console.log("rendering from json");
-            res.render("index", { Projects: contents.Data });
-        }
-        else throw "Needs update.";
-    } catch {
-        console.log("refreshing data");
+router.get("/update", function (req, res) {
+    console.log("refreshing data");
 
-        getProjects()
-        .then(attachCollaborators)
-        .then(attachScreenshots)
-        .then(result => {
-            console.log(result);        
-            storeProjects(result);
-            res.render("index", { Projects: result });
-       });
-    }
+    getProjects()
+    .then(attachCollaborators)
+    .then(attachScreenshots)
+    .then(result => {
+        console.log(result);        
+        storeProjects(result);
+        res.render("index", { Projects: result });
+    });
+});
+
+router.get("/", function (req, res) {
+    let rawData = fs.readFileSync(filePath, "utf8");
+    let contents = JSON.parse(rawData);
+    console.log("rendering from json");
+    let projects = [];
+    contents.Data.forEach(x => {
+        if (x) {
+            console.log(x);
+            projects.push(x);
+        }
+    });
+    res.render("index", { Projects: projects });
 });
 
 function storeProjects(projects) {
