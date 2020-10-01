@@ -1,14 +1,19 @@
 # Josiah Powell Portfolio website
 
+## Description
+
+This is the repository for my personal portfolio website!
+
+<b>Technologies used</b>
+Express, Handlebars, JQuery, MySQL, Node, Request, Sequelize
+
 ## The Website
 
-![Screenshot of Github Website](https://joepall.github.io/CSS-Bootstrap/Assets/Images/screenshot.png)
+![Screenshot of Website #1 (Desktop)](https://josiah-powell-portfolio.herokuapp.com/images/screenshot-1.png)
+![Screenshot of Website #2 (Desktop)](https://josiah-powell-portfolio.herokuapp.com/images/screenshot-2.png)
+![Screenshot of Website #3 (Mobile)](https://josiah-powell-portfolio.herokuapp.com/images/screenshot-3.png)
 
-[Checkout the website](https://salty-eyrie-05927.herokuapp.com/)
+[Checkout the website](https://josiah-powell-portfolio.herokuapp.com/)
 
 
-Author: Josiah Powell
-
-Date: 6/18/20
-
-Made with ❤ and ☕ from Overbrook, KS
+Made with ❤ and ☕ in Overbrook, KS
