@@ -29,7 +29,7 @@ h1 {
     text-transform: uppercase;
 }
 
-article>p, section>p {
+p {
     text-transform: none;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -52,4 +52,19 @@ li {
 
 .bg-50 {
     opacity: .5;
+}
+
+.glow {
+    -webkit-filter: drop-shadow( 0px 0px 50px rgb(255, 255, 255));
+    filter: drop-shadow( 0px 0px 50px rgb(255, 255, 255));
+}
+
+.color-fadein {
+    -webkit-filter: grayscale(120%);
+    filter: grayscale(120%);
+}
+
+.color-fadein:hover {
+    -webkit-filter: grayscale(20%);
+    filter: grayscale(20%);
 }

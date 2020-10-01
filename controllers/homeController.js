@@ -95,7 +95,8 @@ function attachCollaborators(projects) {
     });
 
     return Promise.all(requests).then(result => {
-        console.log(result);
+        console.log("completed contributors");
+        fs.writeFileSync("test.json", JSON.stringify({ Date: new Date().toDateString(), Data: result }, null, 4));
         return result;
     });
 }
@@ -110,7 +111,6 @@ function attachScreenshots(projects) {
                 project.screenshots = [];
                 let readme = "https://raw.githubusercontent.com/" + github.User + "/" + project.name + "/master/README.md";
                 request(readme, (err, data, body) => {
-                    console.log(project.name + " in request");
                     try {
                         if (err) rej(err);
                         if (body.toString().startsWith("404")) return console.log("404");;
@@ -131,6 +131,7 @@ function attachScreenshots(projects) {
                     }
                 });
             } catch (error) {
+                console.log("completed screenshots");
                 res(project);
             }
         });
