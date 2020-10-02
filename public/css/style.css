@@ -72,3 +72,19 @@ li {
 .image-modal-button {
     cursor: pointer;
 }
+
+.rounded-sm {
+    border-radius: .5rem !important;
+}
+
+.rounded-md {
+    border-radius: 1rem !important;
+}
+
+.rounded-lg {
+    border-radius: 2rem !important;
+}
+
+.rounded-lg {
+    border-radius: 3rem !important;
+}

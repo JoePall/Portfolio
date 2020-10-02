@@ -104,6 +104,17 @@
           "avatar_url": "https://avatars3.githubusercontent.com/u/16060650?v=4",
           "html_url": "https://github.com/JoePall"
         }
+      ],
+      "videos": [
+          {
+            "name": "Terminally Swell Demo",
+            "formats": [
+              {
+                "url": "https://github.com/JoePall/terminally-swell/blob/swell/assets/terminally-swell.mp4?raw=true",
+                "type": "mp4"
+              }
+            ]
+          }
       ]
     },
     {
@@ -145,7 +156,6 @@
         }
       ]
     },
-    null,
     {
       "name": "Duly-Noted",
       "url": "https://github.com/JoePall/Duly-Noted",

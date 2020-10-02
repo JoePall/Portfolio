@@ -48,6 +48,22 @@
       </div>
       {{/if}}
 
+      {{#if videos}}
+      <div class="row mt-2">
+        <h3>SEE IT IN ACTION</h3>
+      </div>
+      <div class="row mt-2">
+        {{#each videos}}
+        <video class="w-75 mx-auto rounded-md" controls>
+          {{#each formats}}
+          <source src="{{url}}" type="video/{{type}}">
+          {{/each}}
+          Your browser does not support the video tag.
+        </video>
+        {{/each}}
+      </div>
+      {{/if}}
+
     </div>
   </div>
 </div>
