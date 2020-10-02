@@ -52,20 +52,20 @@
       "contributors_url": "https://api.github.com/repos/JoePall/Storventory/contributors",
       "screenshots": [
         {
-          "url": "Screenshot of Storventory (Shopping List Page on Mobile)",
-          "alt": "https://storventory.herokuapp.com/images/screenshot-1.png"
+          "alt": "Screenshot of Storventory (Shopping List Page on Mobile)",
+          "url": "https://storventory.herokuapp.com/images/screenshot-1.png"
         },
         {
-          "url": "Screenshot of Storventory (Inventory Page on Mobile)",
-          "alt": "https://storventory.herokuapp.com/images/screenshot-2.png"
+          "alt": "Screenshot of Storventory (Inventory Page on Mobile)",
+          "url": "https://storventory.herokuapp.com/images/screenshot-2.png"
         },
         {
-          "url": "Screenshot of Storventory (Restaurants Page on Mobile)",
-          "alt": "https://storventory.herokuapp.com/images/screenshot-3.png"
+          "alt": "Screenshot of Storventory (Restaurants Page on Mobile)",
+          "url": "https://storventory.herokuapp.com/images/screenshot-3.png"
         },
         {
-          "url": "Screenshot of Storventory (Restaurants Page on Mobile)",
-          "alt": "https://storventory.herokuapp.com/images/screenshot-4.png"
+          "alt": "Screenshot of Storventory (Restaurants Page on Mobile)",
+          "url": "https://storventory.herokuapp.com/images/screenshot-4.png"
         }
       ],
       "contributors": [
