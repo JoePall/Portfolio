@@ -13,9 +13,17 @@ module.exports = function(app) {
     getProjects()
       .then(attachCollaborators)
       .then(attachScreenshots)
-      .then((result) => {
-        storeProjects(result);
-        res.render("index", { Projects: result });
+      .then((projects) => {
+          projects.forEach(project => {
+            if (project) {
+                db.Project.create({
+                    Name: project.name,
+                    Date: date,
+                    Data: JSON.stringify(project)
+                });
+            }
+        });
+        res.render("index", { Projects: projects });
       });
   });
 
@@ -39,7 +47,7 @@ module.exports = function(app) {
             });
         }
     });
-    res("Done")
+    res.send("<script>window.location.replace(\"/\")</script>");
     
   });
 
@@ -47,6 +55,9 @@ module.exports = function(app) {
     db.Project.findAll().then(data => {
         if (data) {
             res.render("index", { Projects: data.map(x => JSON.parse(x.Data)) });
+        }
+        else {
+            res.send("Issue loading...");
         }
     });
   });
@@ -106,7 +117,7 @@ module.exports = function(app) {
 
           request(op, (error, response, body) => {
             try {
-              if (error) reject(error);
+              if (error) resolve(error);
               if (body) {
                 console.log(body);
                 body.forEach((contributor) => {
@@ -120,11 +131,11 @@ module.exports = function(app) {
               }
               resolve(project);
             } catch (error) {
-              reject(error);
+              resolve();
             }
           });
         } catch (error) {
-          reject(error);
+          resolve();
         }
       });
     });
@@ -158,7 +169,7 @@ module.exports = function(app) {
             "/master/README.md";
           request(readme, (err, data, body) => {
             try {
-              if (err) rej(err);
+              if (err) res();
               if (body.toString().startsWith("404")) return console.log("404");
               let images = body.match(/.*.[.*.]?http.*.png/gi);
               if (images) {
@@ -173,12 +184,12 @@ module.exports = function(app) {
               }
               res(project);
             } catch (error) {
-              res(project);
+              res();
             }
           });
         } catch (error) {
           console.log("completed screenshots");
-          res(project);
+          res();
         }
       });
     });

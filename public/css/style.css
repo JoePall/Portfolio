@@ -1,5 +1,5 @@
 html {
-    background: linear-gradient(135deg, #00ffff55,#00ffff55,#00ffff55,#ff995555,#ff995555,#ff995555);
+    background: linear-gradient(135deg, #00ffff9f,#00ffff48,#00ffff15,#ff995515,#ff995548,#ff9955ff);
     position: fixed;
     overflow: hidden;
     top: 0;
@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    background: linear-gradient(215deg,#00ff0035,#00ff0035,#00ff0035,#ff00ff35,#ff00ff35,#ff00ff35);
+    background: linear-gradient(215deg,#00ff0077,#00ff0033,#00ff0015,#ff00ff15,#ff00ff33,#ff00ff55);
     position: fixed;
     overflow: auto;
     top: 0;
@@ -20,7 +20,7 @@ body {
 
 h1 {
     color: #fff;
-    text-shadow: 0 0 .3em #000;
+    text-shadow: 0 0 .8rem #00000088;
 }
 
 * {

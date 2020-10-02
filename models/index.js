@@ -10,6 +10,10 @@ const db = {};
 if (process.env.JAWSDB_URL) {
   var sequelize = new Sequelize(process.env.JAWSDB_URL);
 }
+else if (fs.existsSync(__dirname + '/../config/config.json',)) {
+  const config = require(__dirname + '/../config/config.json')[env];
+  var sequelize = new Sequelize(config.database, config.username, config.password, config);
+}
 
 fs
   .readdirSync(__dirname)
