@@ -7,11 +7,7 @@ const basename = path.basename(module.filename);
 const env = process.env.NODE_ENV || 'development';
 const db = {};
 
-if (fs.existsSync(__dirname + '/../config/config.json',)) {
-  const config = require(__dirname + '/../config/config.json')[env];
-  var sequelize = new Sequelize(config.database, config.username, config.password, config);
-}
-else if (process.env.JAWSDB_URL) {
+if (process.env.JAWSDB_URL) {
   var sequelize = new Sequelize(process.env.JAWSDB_URL);
 }
 

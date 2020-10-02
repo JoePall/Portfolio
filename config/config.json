@@ -1,9 +1,0 @@
-{
-  "development": {
-    "username": "root",
-    "password": "SwimmingOtters357",
-    "database": "portfolio_db",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  }
-}
