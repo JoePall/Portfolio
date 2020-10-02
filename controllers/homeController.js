@@ -20,6 +20,10 @@ module.exports = function(app) {
   });
 
   app.get("/transfer", function(req, res) {
+    db.Project.destroy({
+        where: {},
+        truncate: true
+      })
     let rawData = fs.readFileSync(filePath, "utf8");
     let date = new Date().toDateString();
     let contents = JSON.parse(rawData);
@@ -35,16 +39,15 @@ module.exports = function(app) {
             });
         }
     });
+    res("Done")
     
   });
 
   app.get("/", function(req, res) {
-    db.Project.findAll().then((projects) => {
-      if (projects[0].Date != Date.now.toDateString()) {
-        updateData();
-      } else {
-        res.render("index", { Projects: projects });
-      }
+    db.Project.findAll().then(data => {
+        if (data) {
+            res.render("index", { Projects: data.map(x => JSON.parse(x.Data)) });
+        }
     });
   });
 
