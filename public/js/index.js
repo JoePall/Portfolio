@@ -1,10 +1,10 @@
-$(function() {
+$(() => {
   console.log("ready!");
 
   $(".image-modal-button").on("click", function() {
     console.log($(this));
-    let url = $(this).attr("data-url");
-    let alt = $(this).attr("data-alt");
+    const url = $(this).attr("data-url");
+    const alt = $(this).attr("data-alt");
 
     $(".modal-img").attr("src", url);
     $(".modal-img").attr("alt", alt);
@@ -12,7 +12,7 @@ $(function() {
     $("#image-modal").modal("show");
   });
 
-  $(".close-modal").on("click", function() {
+  $(".close-modal").on("click", () => {
     $(".modal-img").attr("src", null);
     $(".modal-img").attr("alt", "");
     $(".modal-title").val("");
