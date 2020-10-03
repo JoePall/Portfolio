@@ -13,7 +13,6 @@ module.exports = function(app) {
     })
     .forEach(file => {
       const fileName = file.slice(0, -3);
-      console.log(fileName);
       require("./" + fileName)(app);
     });
 

@@ -1,167 +1,167 @@
-module.exports = function(app) {
+/* eslint-disable no-unused-vars */
+/* eslint-disable camelcase */
+
+/* eslint-disable quotes */
+module.exports = app => {
   const db = require("../models");
   const request = require("request");
   const fs = require("fs");
   const filePath = "./projects.json";
   const github = {
-    User: "JoePall",
+    User: "JoePall"
   };
 
-  app.get("/update", function(req, res) {
-    console.log("refreshing data");
+  app.get("/", (req, res) => {
+    const rawData = fs.readFileSync(filePath, "utf8");
+    const contents = JSON.parse(rawData);
+    console.log("rendering from json");
+    res.render("index", { Projects: contents.Data });
+  });
 
+  app.get("/test", (req, res) => {
     getProjects()
       .then(attachCollaborators)
       .then(attachScreenshots)
-      .then((projects) => {
-          projects.forEach(project => {
-            if (project) {
-                db.Project.create({
-                    Name: project.name,
-                    Date: date,
-                    Data: JSON.stringify(project)
-                });
-            }
+      .then(projects => {
+        projects.forEach(project => {
+          if (project) {
+            db.Project.create({
+              Name: project.name,
+              Date: date,
+              Data: JSON.stringify(project)
+            });
+          }
         });
         res.render("index", { Projects: projects });
       });
   });
 
-  app.get("/transfer", function(req, res) {
-    db.Project.destroy({
-        where: {},
-        truncate: true
-      })
-    let rawData = fs.readFileSync(filePath, "utf8");
-    let date = new Date().toDateString();
-    let contents = JSON.parse(rawData);
-    console.log("rendering from json");
-    console.log(date);
-    console.log(db.Project);
-    contents.Data.forEach(project => {
-        if (project) {
+  function updateDBFromAPI() {
+    getProjects()
+      .then(attachScreenshots)
+      .then(projects => {
+        projects.forEach(project => {
+          if (project) {
             db.Project.create({
-                Name: project.name,
-                Date: date,
-                Data: JSON.stringify(project)
+              Name: project.name,
+              Date: date,
+              Data: JSON.stringify(project)
             });
-        }
-    });
-    res.send("<script>window.location.replace(\"/\")</script>");
-    
-  });
-
-  app.get("/", function(req, res) {
-    db.Project.findAll().then(data => {
-        if (data) {
-            res.render("index", { Projects: data.map(x => JSON.parse(x.Data)) });
-        }
-        else {
-            res.send("Issue loading...");
-        }
-    });
-  });
-
-  function storeProjects(projects) {
-    fs.writeFileSync(
-      filePath,
-      JSON.stringify(
-        { Date: new Date().toDateString(), Data: projects },
-        null,
-        4
-      )
-    );
+          }
+        });
+        return projects;
+      });
   }
 
-  function getProjects() {
+  function updateProjectsInDB() {
     return new Promise((resolve, reject) => {
-      var options = {
+      const options = {
         method: "GET",
         uri: "https://api.github.com/users/" + github.User + "/repos",
         json: true,
         headers: {
-          "User-Agent": github.User,
-        },
+          "User-Agent": github.User
+        }
       };
 
       request(options, (error, response, data) => {
-        if (error) reject(error);
-        resolve(
-          Object.keys(data).map((key) => {
-            return {
-              name: data[key].name,
-              url: data[key].html_url,
-              description: data[key].description,
-              website: data[key].homepage,
-              contributors_url: data[key].contributors_url,
-            };
-          })
-        );
+        if (data.toString().indexOf("API rate limit") > -1) {
+          console.log("API LIMIT REACHED");
+          res.send('<script>window.location.replace("/transfer")</script>');
+          reject("API LIMIT REACHED");
+        }
+
+        db.Project.findOrCreate({
+          where: {
+            id: project.id
+          },
+          defaults: {
+            name: data[key].name,
+            url: data[key].html_url,
+            description: data[key].description,
+            website: data[key].homepage,
+            contributors_url: data[key].contributors_url
+          }
+        });
       });
     });
   }
-
-  function attachCollaborators(projects) {
-    let requests = projects.map((project) => {
+  function updateCollaborators(projects) {
+    projects.forEach(project => {
       return new Promise((resolve, reject) => {
         try {
+          if (!project.contributors_url) {
+            resolve(project);
+            return;
+          }
           project.contributors = [];
-          var op = {
+          const op = {
             method: "GET",
             uri: project.contributors_url,
             json: true,
             headers: {
-              "User-Agent": github.User,
-            },
+              "User-Agent": github.User
+            }
           };
 
           request(op, (error, response, body) => {
+            console.log(response);
             try {
-              if (error) resolve(error);
+              if (error) {
+                resolve(project);
+                return;
+              }
               if (body) {
-                console.log(body);
-                body.forEach((contributor) => {
-                  project.contributors.push({
-                    avatar_url: body.avatar_url,
-                    login: body.login,
-                    html_url: body.html_url,
-                    commits: body.commits,
+                body.forEach(contributor => {
+                  db.Developer.findOrCreate({
+                    where: {
+                      id: contributor.id
+                    },
+                    defaults: {
+                      id: contributor.id,
+                      AvatarURL: contributor.avatar_url,
+                      githubURL: contributor.html_url
+                    }
+                  });
+
+                  console.log("homeController.js: 155");
+                  db.DeveloperProject.findOrCreate({
+                    where: {
+                      developerID: contributor.id,
+                      projectID: project.id
+                    },
+                    defaults: {
+                      developerID: contributor.id,
+                      projectID: project.id
+                    }
                   });
                 });
               }
               resolve(project);
             } catch (error) {
-              resolve();
+              resolve(project);
             }
           });
         } catch (error) {
-          resolve();
+          resolve(project);
         }
       });
     });
 
-    return Promise.all(requests).then((result) => {
-      console.log("completed contributors");
-      fs.writeFileSync(
-        "test.json",
-        JSON.stringify(
-          { Date: new Date().toDateString(), Data: result },
-          null,
-          4
-        )
-      );
+    return Promise.all(requests).then(result => {
+      console.log("Contributors: " + console.table(result));
       return result;
     });
   }
 
   function attachScreenshots(projects) {
     console.log("attachScreenshots");
-    let requests = projects.map((project) => {
-      return new Promise((res, rej) => {
+    const requests = projects.map(project => {
+      return new Promise((resolve, rej) => {
         try {
           console.log(project.name);
           project.screenshots = [];
-          let readme =
+          const readme =
             "https://raw.githubusercontent.com/" +
             github.User +
             "/" +
@@ -169,35 +169,39 @@ module.exports = function(app) {
             "/master/README.md";
           request(readme, (err, data, body) => {
             try {
-              if (err) res();
-              if (body.toString().startsWith("404")) return console.log("404");
-              let images = body.match(/.*.[.*.]?http.*.png/gi);
+              if (err) {
+                resolve(project);
+                return;
+              }
+              if (body.toString().startsWith("404")) {
+                resolve(project);
+                return console.log("404");
+              }
+              const images = body.match(/.*.[.*.]?http.*.png/gi);
               if (images) {
-                images.forEach((img) => {
-                  let parts = img.split("](");
-                  let screenshot = {
+                images.forEach(img => {
+                  const parts = img.split("](");
+                  const screenshot = {
                     url: parts[1],
-                    alt: parts[0].replace("![", ""),
+                    alt: parts[0].replace("![", "")
                   };
                   project.screenshots.push(screenshot);
                 });
               }
-              res(project);
+              resolve(project);
             } catch (error) {
-              res();
+              resolve(project);
             }
           });
         } catch (error) {
-          console.log("completed screenshots");
-          res();
+          resolve(project);
         }
       });
     });
 
-    return Promise.all(requests).then((result) => {
+    return Promise.all(requests).then(result => {
+      console.log(result);
       return result;
     });
   }
-
-  module.exports = app;
 };
