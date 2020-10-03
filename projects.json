@@ -10,15 +10,15 @@
       "screenshots": [
         {
           "url": "https://user-images.githubusercontent.com/64044377/88989496-65efbf80-d2a1-11ea-8b3a-339f917facae.png",
-          "alt": "img-1"
+          "alt": "Screenshot #1 of Exploration Food"
         },
         {
           "url": "https://user-images.githubusercontent.com/64044377/88989508-6e47fa80-d2a1-11ea-97cd-98182c5d4e16.png",
-          "alt": "img-2"
+          "alt": "Screenshot #2 of Exploration Food"
         },
         {
           "url": "https://user-images.githubusercontent.com/64044377/88989440-3e005c00-d2a1-11ea-9892-9d5ec24aab17.png",
-          "alt": "img-3"
+          "alt": "Screenshot #3 of Exploration Food"
         }
       ],
       "contributors": [
@@ -252,7 +252,7 @@
       ]
     },
     {
-      "name": "Java<b>Script</b> Quiz",
+      "name": "JavaScript Quiz",
       "url": "https://github.com/JoePall/Web-API",
       "description": "JavaScript Quiz Application! Do a simple JavaScript Quiz with this app and remember to have fun!",
       "website": "https://joepall.github.io/Web-API/",
