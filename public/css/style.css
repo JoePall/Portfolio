@@ -23,6 +23,12 @@ body {
     box-shadow: 0 0.8rem 1rem -1rem black !important
 }
 
+.shadow-sm:hover {
+    -webkit-box-shadow: 0 1.2rem .5rem -.5rem black !important;
+    -moz-box-shadow: 0 1.2rem .5rem -.5rem black !important;
+    box-shadow: 0 1.2rem .5rem -.5rem black !important
+}
+
 h1 {
     color: #fff;
     text-shadow: 0 0 2rem #00000088;
