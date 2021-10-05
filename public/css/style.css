@@ -71,12 +71,12 @@ li {
     filter: drop-shadow( 0px 0px 50px rgb(255, 255, 255));
 }
 
-.color-fadein {
+img, .color-fadein {
     -webkit-filter: grayscale(120%);
     filter: grayscale(120%);
 }
 
-.color-fadein:hover {
+img, .color-fadein:hover {
     -webkit-filter: grayscale(20%);
     filter: grayscale(20%);
 }
