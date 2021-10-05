@@ -8,7 +8,7 @@ html {
 }
 
 body {
-    background: conic-gradient(#ff4500, #ffffcc, #ccffcc, #ccffff, #ccccff, #ffccff, #FF4500);
+    background: conic-gradient(#ff4500, #ff4500, #ffffcc, #ccffcc, #ccffff,#ffffff,#ccffff, #ccccff, #ffccff, #FF4500);
     position: fixed;
     overflow: auto;
     top: 0;
@@ -17,14 +17,14 @@ body {
     right: 0;
 }
 
-.shadow-sm {
+img, .btn, .shadow-sm {
     -webkit-box-shadow: 0 0.8rem 1rem -1rem black !important;
     -moz-box-shadow: 0 .8rem 1rem -1rem black !important;
     box-shadow: 0 0.8rem 1rem -1rem black !important
 }
 
-.shadow-sm:hover {
-    transform: scale(1.1);
+img, .btn, .shadow-sm:hover {
+    transform: scale(1.03);
     -webkit-box-shadow: 0 1rem 1.5rem -1.5rem black !important;
     -moz-box-shadow: 0 1rem 1.5rem -1.5rem black !important;
     box-shadow: 0 1rem 1.5rem -1.5rem black !important
