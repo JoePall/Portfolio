@@ -23,7 +23,7 @@ img, .btn, .shadow-sm {
     box-shadow: 0 0.8rem 1rem -1rem black !important
 }
 
-img, .btn, .shadow-sm:hover {
+img:hover, .btn:hover, .shadow-sm:hover {
     transform: scale(1.03);
     -webkit-box-shadow: 0 1rem 1.5rem -1.5rem black !important;
     -moz-box-shadow: 0 1rem 1.5rem -1.5rem black !important;
@@ -76,7 +76,7 @@ img, .color-fadein {
     filter: grayscale(120%);
 }
 
-img, .color-fadein:hover {
+img:hover, .color-fadein:hover {
     -webkit-filter: grayscale(20%);
     filter: grayscale(20%);
 }
