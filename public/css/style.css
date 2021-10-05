@@ -8,7 +8,6 @@ html {
 }
 
 body {
-    -webkit-transform: skew(30deg, 0deg);
     background: conic-gradient(#ff4500, #ffffcc, #ccffcc, #ccffff, #ccccff, #ffccff, #FF4500);
     position: fixed;
     overflow: auto;
