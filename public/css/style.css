@@ -1,5 +1,5 @@
 html {
-    background: linear-gradient(135deg, #00ffff9f,#00ffff48,#00ffff15,#ff995515,#ff995548,#ff9955ff);
+    background: linear-gradient(135deg, #FF4500,#FF4545);
     position: fixed;
     overflow: hidden;
     top: 0;
@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    background: linear-gradient(215deg,#00ff0077,#00ff0033,#00ff0015,#ff00ff15,#ff00ff33,#ff00ff55);
+    background: linear-gradient(215deg,#ff00ff33,#ff00ff55);
     position: fixed;
     overflow: auto;
     top: 0;
