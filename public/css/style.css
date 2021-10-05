@@ -1,5 +1,4 @@
 html {
-    background: linear-gradient(135deg, #013225,#ffffff,#ffffff,#FF4500);
     position: fixed;
     overflow: hidden;
     top: 0;
@@ -9,7 +8,8 @@ html {
 }
 
 body {
-    background: linear-gradient(215deg,#ff4500,#ffffff,#ffffff,#013225);
+    -webkit-transform: skew(30deg, 0deg);
+    background: conic-gradient(#ff4500, #ffffcc, #ccffcc, #ccffff, #ccccff, #ffccff, #FF4500);
     position: fixed;
     overflow: auto;
     top: 0;
