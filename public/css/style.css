@@ -1,5 +1,5 @@
 html {
-    background: linear-gradient(135deg, #FF4500,#FF4545);
+    background: linear-gradient(135deg, #013225,#ffffff,#ffffff,#FF4500);
     position: fixed;
     overflow: hidden;
     top: 0;
@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    background: linear-gradient(215deg,#ff00ff33,#ff00ff55);
+    background: linear-gradient(215deg,#ff4500,#ffffff,#ffffff,#013225);
     position: fixed;
     overflow: auto;
     top: 0;
@@ -20,11 +20,11 @@ body {
 
 h1 {
     color: #fff;
-    text-shadow: 0 0 .8rem #00000088;
+    text-shadow: 0 0 2rem #00000088;
 }
 
 * {
-    transition: .2s;
+    transition: .35s;
     font-family: 'Raleway', sans-serif;
     text-transform: uppercase;
 }
