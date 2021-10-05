@@ -23,11 +23,14 @@ img, .btn, .shadow-sm {
     box-shadow: 0 0.8rem 1rem -1rem black !important
 }
 
+.shadow-sm:hover, .btn:hover {
+    transform: scale(1.02);
+}
+
 img:hover, .btn:hover, .shadow-sm:hover {
-    transform: scale(1.03);
-    -webkit-box-shadow: 0 1rem 1.5rem -1.5rem black !important;
-    -moz-box-shadow: 0 1rem 1.5rem -1.5rem black !important;
-    box-shadow: 0 1rem 1.5rem -1.5rem black !important
+    -webkit-box-shadow: 0rem .5rem 1.5rem 0rem #0007 !important;
+    -moz-box-shadow: 0rem .5rem 1.5rem 0rem #0007 !important;
+    box-shadow: 0rem .5rem 1.5rem 0rem #0007 !important;
 }
 
 h1 {
@@ -36,7 +39,7 @@ h1 {
 }
 
 * {
-    transition: .35s;
+    transition: all linear .35s;
     font-family: 'Raleway', sans-serif;
     text-transform: uppercase;
 }
