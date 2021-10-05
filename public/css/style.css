@@ -18,6 +18,12 @@ body {
     right: 0;
 }
 
+.shadow-sm {
+    -webkit-box-shadow: 0 0.8rem 1rem -1rem black !important;
+    -moz-box-shadow: 0 .8rem 1rem -1rem black !important;
+    box-shadow: 0 0.8rem 1rem -1rem black !important
+}
+
 h1 {
     color: #fff;
     text-shadow: 0 0 2rem #00000088;
