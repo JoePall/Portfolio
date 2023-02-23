@@ -16,7 +16,7 @@
         "node": "^14.8.0",
         "request": "^2.88.2",
         "request-promise": "^4.2.6",
-        "sequelize": "^5.8.6"
+        "sequelize": "^6.28.2"
     },
     "devDependencies": {
         "prettier": "^1.13.7"
